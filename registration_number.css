@@ -1,0 +1,59 @@
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.first{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.but{
+    padding-left: 20px;
+}
+.outPut{
+    border:solid black;
+    border-radius: 50px;
+    width: 200px;
+    height: 30px;
+    background-color: yellow;
+    justify-content: center;
+}
+.errors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3%;
+    color: red;
+}
+
+.green{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3%;
+    color: green;
+}
+
+.all {
+    background-color: lightgrey;
+    width: 300%;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+  }
+  li{
+    border:solid black;
+    border-radius: 50px;
+    width: 150px;
+    height: 25px;
+    background-color: yellow;
+    justify-content: center;
+    float: left;
+    
+}
