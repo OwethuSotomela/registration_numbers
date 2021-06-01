@@ -43,6 +43,9 @@ function Registration(local) {
     function getMessage(){
         return message;
     }
+    function regCounter(){
+        return regList.length;
+    }
     return {
         Registration,
         setRegi,
@@ -50,6 +53,7 @@ function Registration(local) {
         getRegi,
         getMessage,
         getFilterTown,
+        regCounter,
     }
 }
 
