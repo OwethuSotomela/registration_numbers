@@ -26,7 +26,6 @@ function Registration(local) {
             }
         }
     }
-
     function regPlate(regPlate){
         filterTown = []
         for(var i=0; i<regList.length; i++){
@@ -35,19 +34,15 @@ function Registration(local) {
             }
         }
     }
-
     function getFilterTown(){
         return filterTown;
     }
-
     function getRegi() {
         return regList;
     }
-
     function getMessage(){
         return message;
     }
-
     return {
         Registration,
         setRegi,

@@ -15,7 +15,6 @@ if (localStorage['plates']) {
     regStored = [];
 }
 
-
 let regi = Registration(regStored)
 
 dsiplayFun(regi.getRegi())
@@ -34,18 +33,13 @@ function dsiplayFun(argPassed) {
         element.appendChild(node);
     }
 }
-
 function setOut() {
     setTimeout(function () {
         errorsElement.innerHTML = ''
     }, 3000)
 }
-
-
-
 function addRegistration() {
     var inputText = inputTextElement.value
-
 
     if (inputText !== "") {
         if (regi.setRegi(inputText)) {
@@ -59,16 +53,15 @@ function addRegistration() {
             errorsElement.classList.remove("green")
             errorsElement.classList.add("errors")
             errorsElement.innerHTML = regi.getMessage()
-            }
-        } else {
-            errorsElement.classList.remove("green")
-            errorsElement.classList.add("errors")
-            errorsElement.innerHTML = "Please enter a valid registration number!"
         }
-            inputTextElement.value = ''
-            setOut()
+    } else {
+        errorsElement.classList.remove("green")
+        errorsElement.classList.add("errors")
+        errorsElement.innerHTML = "Please enter a valid registration number!"
+    }
+    inputTextElement.value = ''
+    setOut()
 }
-
 function forTown() {
     var radioBtnChecked = document.querySelector("input[name='itemType1']:checked");
     if (radioBtnChecked) {
@@ -80,27 +73,27 @@ function forTown() {
         } else {
             errorsElement.classList.remove("green")
             errorsElement.classList.add("errors")
-            errorsElement.innerHTML = "No registration plates for this town!"
+            errorsElement.innerHTML = "No registration numbers for this town!"
             dsiplayFun(array)
         }
 
     } else {
         errorsElement.classList.remove("green")
         errorsElement.classList.add("errors")
-        errorsElement.innerHTML = "Select town first!"
+        errorsElement.innerHTML = "Select the town to show the registration numbers for!"
     } setOut()
 }
 
-
 function removeCars() {
 
-errorsElement.innerHTML = "Local storage will be cleared in 1 second!"
+    errorsElement.classList.remove("errors")
+    errorsElement.classList.add("green")
+    errorsElement.innerHTML = "Local storage will be cleared in 5 second!"
     setTimeout(function () {
         localStorage.clear()
         location.reload()
-    }, 1000)
+    }, 5000)
 }
 showElement.addEventListener('click', forTown)
 resetBtnElement.addEventListener('click', removeCars)
 addButtonElement.addEventListener('click', addRegistration)
-
