@@ -1,5 +1,7 @@
 h1{
     font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    background-color: grey;
 }
 section{
     display: flex;
@@ -13,8 +15,11 @@ section{
     flex-direction: row;
     justify-content: center;
 }
-.but{
-    padding-left: 20px;
+.firstBar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .errors{
     display: flex;
@@ -31,7 +36,9 @@ section{
     color: green;
 }
 .all {
-    background-color: lightgrey;
+    background-image: url('../images/c7.jpg');
+    background-size: 150%;
+    background-repeat: no-repeat;
     width: 300%;
     border: 2px solid black;
     padding: 50px;
@@ -47,6 +54,12 @@ section{
     float: left;
 }
 .townName{
+    width: 160%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.townBar{
     width: 160%;
     display: flex;
     flex-direction: row;
