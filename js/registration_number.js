@@ -33,7 +33,7 @@ function dsiplayFun(argPassed) {
         element.appendChild(node);
     }
 }
-function setOut() {
+function setOutEmpty() {
     setTimeout(function () {
         errorsElement.innerHTML = ''
     }, 3000)
@@ -60,7 +60,7 @@ function addRegistration() {
         errorsElement.innerHTML = "Please enter a valid registration number!"
     }
     inputTextElement.value = ''
-    setOut()
+    setOutEmpty()
 }
 function forTown() {
     var radioBtnChecked = document.querySelector("input[name='itemType1']:checked");
@@ -81,7 +81,7 @@ function forTown() {
         errorsElement.classList.remove("green")
         errorsElement.classList.add("errors")
         errorsElement.innerHTML = "Select the town to show the registration numbers for!"
-    } setOut()
+    } setOutEmpty()
 }
 
 function removeCars() {
@@ -97,3 +97,5 @@ function removeCars() {
 showElement.addEventListener('click', forTown)
 resetBtnElement.addEventListener('click', removeCars)
 addButtonElement.addEventListener('click', addRegistration)
+
+setOutEmpty()
