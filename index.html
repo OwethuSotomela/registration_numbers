@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="./css/registration_number.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="regTemplate">
+        <ul style="list-style: none;">
+            {{#each regBar}}
+                <li>{{this}}</li>
+            {{/each}}    
+        </ul>
+    </script>
+
 </head>
 
 <body>
@@ -71,100 +81,67 @@
                     </ul>
                 </div>
             </div>
-        </section>
 
-    </main>
 
-    <footer>
-    </footer>
-
-    <script src="./js/registration_number.widget.js" charset="utf-8"></script>
-    <script src="./js/registration_number.js" charset="utf-8"></script>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./css/registration_number.css">
-</head>
-
-<body>
-
-    <header>
-    </header>
-
-    <main>
-        <section>
             <div class="all">
                 <br>
                 <h1>Registration Numbers:</h1>
-                <div class="errors"></div>
-                <div class="first">
+                <div class="errorBar"></div>
+                <div class="firstBar">
                     <form>
-                        <input type="text" placeholder="Eg. CA 123-456, CY 123456, CX 123 456" class="townName"
-                            name="regisNumber"><br>
+                        <input type="text" placeholder="Eg. CA 123-456, CY 123456, CX 123 456" class="townBar"
+                            name="barNumber"><br>
                     </form>
                     <div class="but">
-                        <button class="addButton" type="button"><em>Add</em></button>
+                        <button class="addBar" type="button"><em>Add</em></button>
                     </div>
                 </div>
                 <br>
                 <div class="sec">
                     <div class="but">
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="CA">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="CA">
                             <span class="label-body">Cape Town</span>
                         </label>
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="CL">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="CL">
                             <span class="label-body">Stellenbotsch</span>
                         </label>
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="CW">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="CW">
                             <span class="label-body">Woercester</span>
                         </label>
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="CX">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="CX">
                             <span class="label-body">Knysna</span>
                         </label>
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="CY">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="CY">
                             <span class="label-body">Bellville</span>
                         </label>
                         <label class="">
-                            <input type="radio" name="itemType1" class="itemTypeRadio1" value="">
+                            <input type="radio" name="itemTypeBar" class="itemTypeRadioBar" value="">
                             <span class="label-body">All</span>
                         </label>
                     </div>
                     <br>
                     <div class="butt1">
-                        <button class="showButton" type="button"><em>Show</em></button>
-                        <button class="resetButton" type="button"><em>Reset</em></button>
+                        <button class="showBar" type="button"><em>Show</em></button>
+                        <button class="resetBar" type="button"><em>Reset</em></button>
                     </div>
                     <br>
                 </div>
-                <div class="displayNumber">
-                    <ul id="myList" style="list-style: none;">
-                    </ul>
-                </div>
+                <div class="displayBar"></div>
             </div>
+            
         </section>
+
     </main>
 
-    <footer>
-    </footer>
 
-    <script src="./js/registration_number.widget.js" charset="utf-8"></script>
+    <script src="./js/registration_number.widget.js"></script>
     <script src="./js/registration_number.js" charset="utf-8"></script>
+    <script src="./js/registration_number_template.js" charset="utf-8"></script>
 
 </body>
-
 </html>

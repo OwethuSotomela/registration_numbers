@@ -90,7 +90,7 @@ function removeCars() {
     errorsElement.classList.add("green")
     errorsElement.innerHTML = "Local storage will be cleared in 5 seconds!"
     setTimeout(function () {
-        localStorage.clear()
+        localStorage.removeItem('plates');
         location.reload()
     }, 5000)
 }
