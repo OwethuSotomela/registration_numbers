@@ -55,7 +55,7 @@ function addRegistration() {
     setOut()
 }
 function forTown() {
-    var radioBtnChecked = document.querySelector("input[name='itemType1']:checked");
+    var radioBtnChecked = document.querySelector("input[name='itemTypeBar']:checked");
     if (radioBtnChecked) {
         radioBtnChecked = radioBtnChecked.value
         regiBar.regPlate(radioBtnChecked)
