@@ -36,13 +36,17 @@ section{
     color: green;
 }
 .all {
-    background-image: url('../images/c8.jpeg');
+    /* background-color: silver;
+     */
+    background-image: url(../images/c7.jpg);
     background-size: 150%;
     background-repeat: no-repeat;
     width: 300%;
     border: 2px solid black;
+    border-radius: 25px;
     padding: 50px;
     margin: 20px;
+    box-shadow: 25px 25px 25px grey;
   }
   li{
     border:solid black;
@@ -70,5 +74,5 @@ section{
     padding-left: 70px;
     padding-top: 30px;
     margin-right: 10%;
-    /* all: unset; */
+   
 }
